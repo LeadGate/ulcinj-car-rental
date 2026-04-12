@@ -170,18 +170,8 @@ const AirportPage = () => {
           <p className="text-gray-700 mb-4 leading-relaxed">Choose <strong>full coverage</strong> or at least <strong>SCDW</strong> if you want the lowest out-of-pocket risk on a Montenegro rental car. Standard <strong>CDW</strong> may still leave an <strong>excess/deductible</strong> or <strong>franchise</strong>, and some companies require a card <strong>preauthorisation</strong> before release of the vehicle. The caveat is that even full coverage can exclude tires, glass, underbody damage, or unauthorized border crossings near <strong>Sukobin/Muriqan</strong>.</p>
           <h3 className="text-xl font-bold mt-6 mb-3">What car is best for Ulcinj beaches and city parking?</h3>
           <InfoBox><p>A compact model such as <strong>Hyundai i10</strong>, <strong>Opel Corsa</strong>, <strong>Peugeot 208</strong>, or <strong>Citroën C3</strong> is usually best for Ulcinj because it is easier to park near <strong>Mala Plaža</strong>, <strong>Korzo promenade</strong>, and the beach access roads. These cars are typically lighter on fuel and simpler to maneuver in narrow streets, while a larger <strong>Renault Megane</strong> or <strong>Hyundai i20</strong> may be more comfortable if you travel with family luggage. The exception is a long stay with frequent trips to <strong>Ada Bojana</strong> or <strong>Valdanos Cove</strong>, where a crossover like the <strong>Peugeot 2008</strong> can be worth the extra size.</p></InfoBox>
-          <p className="text-gray-700 mb-4 leading-relaxed"><strong>Related guides:</strong> <a href="/driving-parking-guide" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Driving &amp; Parking Guide for Ulcinj</a> · <a href="/beaches-day-trips" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Beaches and Day Trips</a> · <a href="/faq" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FAQ page</a></p>
           <AffiliateWidget />
       </Section>
-
-      <section className="container max-w-4xl py-10">
-        <h2 className="text-xl md:text-2xl font-bold mb-4">Related guides</h2>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><a href="/beaches-day-trips" className="text-primary hover:underline">Day Trips</a></li>
-          <li><a href="/driving-parking-guide" className="text-primary hover:underline">Driving Tips</a></li>
-          <li><a href="/faq" className="text-primary hover:underline">FAQ</a></li>
-        </ul>
-      </section>
 
       <div className="flex justify-center pb-12">
         <a href="/#compare" className="cta-button">Compare Car Rental Deals</a>
