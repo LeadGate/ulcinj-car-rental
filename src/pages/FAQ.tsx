@@ -125,7 +125,7 @@ const FAQ = () => {
   return (
     <Layout>
       <SEOHead
-        title="Ulcinj Car Rental FAQ — Insurance, IDP, Albania Border, Parking | Ulcinj Car Rental"
+        title="Ulcinj Car Rental FAQ — Insurance, IDP & More"
         description="Renting a car in Ulcinj helps you reach the Adriatic coast, the Ulcinj Riviera, and day-trip stops such as Velika Plaža and Old Town Ulcinj without"
         canonical="https://ulcinj-car-rental.com/faq"
         jsonLd={[breadcrumbSchema, faqSchema]}

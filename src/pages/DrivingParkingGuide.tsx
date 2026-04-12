@@ -54,7 +54,7 @@ const DrivingGuide = () => {
   return (
     <Layout>
       <SEOHead
-        title="Ulcinj Driving Rules & Parking Zones — Prices, Apps, Free Spots | Ulcinj Car Rental"
+        title="Ulcinj Driving Rules & Parking — Prices & Tips"
         description="Ulcinj is a strong base for a rental car because the city connects quickly to the Adriatic coast, the Montenegrin Riviera, and day-trip routes toward"
         canonical="https://ulcinj-car-rental.com/driving-parking-guide"
         jsonLd={[breadcrumbSchema, articleSchema]}

@@ -55,7 +55,7 @@ const DayTrips = () => {
   return (
     <Layout>
       <SEOHead
-        title="Ulcinj Beaches & Day Trips by Car — Routes, Distances, Parking | Ulcinj Car Rental"
+        title="Ulcinj Beaches & Day Trips by Car — Routes & Parking"
         description="Ulcinj, on Montenegro’s southern Adriatic coast, works best as a self-drive base because beaches, border crossings, and hill towns sit 10–120 minutes"
         canonical="https://ulcinj-car-rental.com/beaches-day-trips"
         jsonLd={[breadcrumbSchema, articleSchema]}

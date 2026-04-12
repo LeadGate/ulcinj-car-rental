@@ -54,7 +54,7 @@ const AboutContact = () => {
   return (
     <Layout>
       <SEOHead
-        title="About Us — Ulcinj Car Rental Comparison Guide | Ulcinj Car Rental"
+        title="About Us — Car Rental Guide for Ulcinj"
         description="Welcome to Ulcinj's car rental comparison guide for Montenegro. Ulcinj Car Rental helps travelers compare local and international suppliers, vehicle"
         canonical="https://ulcinj-car-rental.com/about"
         jsonLd={[breadcrumbSchema, articleSchema]}
@@ -64,7 +64,7 @@ const AboutContact = () => {
 
       <HeroSection
         title="About Ulcinj Car Rental"
-        subtitle={<><p>Welcome to Ulcinj's car rental comparison guide for Montenegro. Ulcinj Car Rental helps travelers compare local and international suppliers, vehicle classes, and insurance terms for Ulcinj, the Adriatic coast, and the wider Montenegrin Riviera.</p></>}
+        subtitle={<><p>An independent comparison platform helping travelers find the right vehicle for exploring Montenegro's southern Adriatic coast, from Velika Plaža to Ada Bojana and beyond.</p></>}
         image="/7.webp"
         imageAlt="Car rental in Ulcinj"
         ctaText="Compare Car Rental Deals"
