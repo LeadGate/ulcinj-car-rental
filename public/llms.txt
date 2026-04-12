@@ -1,0 +1,21 @@
+# Ulcinj Car Rental
+
+> Independent car rental comparison platform for Ulcinj, Montenegro. Compares local agencies (Prego, MCommerce, Elezovic, 999, MontenegroCar) with prices from €20/day. Covers Podgorica Airport TGD and Tivat Airport TIV pickup, Velika Plaža and Ada Bojana access, Albania border crossing, and Ulcinj parking zones.
+
+- Website: https://ulcinj-car-rental.com
+- Email: info@ulcinj-car-rental.com
+- Last updated: April 2026
+
+## Pages
+
+- [Home](https://ulcinj-car-rental.com/): Compare car rental prices from 7+ local agencies in Ulcinj, Montenegro. Seasonal pricing (€20-67/day), fleet details, booking tips, and agency reviews.
+- [Airport Transfers](https://ulcinj-car-rental.com/airport-transfers): Podgorica Airport (TGD, 79 km) vs Tivat Airport (TIV, 85 km) comparison. Toll-free routes, summer traffic warnings (4.5h via Budva), taxi fares, and delivery options.
+- [Beaches & Day Trips](https://ulcinj-car-rental.com/beaches-day-trips): 7 day trip routes with exact distances and drive times. Velika Plaža parking (free), Ada Bojana bridge rules (€3/person), Valdanos Cove access, Shkodër Albania border crossing, Skadar Lake, Cetinje.
+- [Driving & Parking](https://ulcinj-car-rental.com/driving-parking-guide): Montenegro driving rules (BAC 0.03%, headlights 24/7), Ulcinj parking zones (€0.70-0.90/hr), Digital Kiosk app for foreign tourists, accident procedure, AMSCG roadside assistance.
+- [FAQ](https://ulcinj-car-rental.com/faq): IDP requirements, Albania cross-border insurance (Green Card €20-60), credit card vs cash agencies, CDW/SCDW explained, EV chargers in Ulcinj, SUV necessity.
+- [About](https://ulcinj-car-rental.com/about): Team information, data sources, affiliate disclosure, useful local contacts (police 122, AMSCG 19807, parking service).
+- [Privacy Policy](https://ulcinj-car-rental.com/privacy-policy): Cookie and data handling policy.
+
+## Full Content
+
+- [Complete site content](https://ulcinj-car-rental.com/llms-full.txt): Full markdown text of all pages (13,600+ words) for AI systems that cannot render JavaScript.
