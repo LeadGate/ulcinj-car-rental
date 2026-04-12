@@ -64,7 +64,7 @@ const DrivingGuide = () => {
 
       <HeroSection
         title="Driving and Parking in Ulcinj: A Practical Guide for Tourists"
-        subtitle={<><p>Ulcinj is a strong base for a rental car because the city connects quickly to the Adriatic coast, the Montenegrin Riviera, and day-trip routes toward Skadar Lake, Virpazar, Cetinje, and the Sukobin/Muriqan border. A typical airport pick-up from <a href="/airport-transfers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Podgorica Airport TGD or Tivat Airport TIV</a> takes about 1.5–2.5 hours depending on traffic, and the Sozina Tunnel can reduce the coastal drive time by roughly 30–40 minutes on busy summer days.</p></>}
+        subtitle={<><p>Ulcinj is a strong base for a rental car because the city connects quickly to the Adriatic coast, the Montenegrin Riviera, and day-trip routes toward Skadar Lake, Virpazar, Cetinje, and the Sukobin/Muriqan border. A typical airport pick-up from Podgorica Airport TGD or Tivat Airport TIV takes about 1.5–2.5 hours depending on traffic, and the Sozina Tunnel can reduce the coastal drive time by roughly 30–40 minutes on busy summer days.</p></>}
         image="/5.webp"
         imageAlt="Car rental in Ulcinj"
         ctaText="Compare Car Rental Deals"

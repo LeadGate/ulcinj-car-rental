@@ -7,6 +7,7 @@ const BeachesDayTrips = lazy(() => import("./pages/BeachesDayTrips"));
 const DrivingParkingGuide = lazy(() => import("./pages/DrivingParkingGuide"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/driving-parking-guide" element={<DrivingParkingGuide />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
       </Routes>

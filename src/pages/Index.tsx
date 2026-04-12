@@ -141,7 +141,7 @@ const Index = () => {
           <h3 className="text-xl font-bold mt-6 mb-3">What is the cheapest time to book a rental in Ulcinj?</h3>
           <p className="text-gray-700 mb-4 leading-relaxed">The cheapest time is usually the off-season, especially <strong>December</strong>, when some deals fall to about <strong>€13/day</strong> and the broader <strong>October–May</strong> period often stays in the <strong>€20–€35/day</strong> range for economy cars. Rates are lower because demand is thinner outside the summer beach season and airport arrivals at <strong>Podgorica Airport TGD</strong> are less concentrated. The caveat is that fleet choice is smaller in winter, so automatic transmissions and larger SUVs may sell out first.</p>
           <InfoBox><p>💡 <strong>Tip:</strong> If you need a guaranteed automatic, compare <strong>Rent a Car 999</strong>, <strong>MontenegroCar</strong>, and airport pickup desks first, because automatic stock is limited during July and August.</p></InfoBox>
-          <p className="text-gray-700 mb-4 leading-relaxed">[COMPARE CAR RENTAL DEALS IN ULCINJ NOW — AFFILIATE WIDGET PLACEHOLDER]</p>
+          <AffiliateWidget />
       </Section>
     </Layout>
   );

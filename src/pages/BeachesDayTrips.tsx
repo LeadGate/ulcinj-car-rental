@@ -191,15 +191,6 @@ const DayTrips = () => {
           </ul>
       </Section>
 
-      <section className="container max-w-4xl py-10">
-        <h2 className="text-xl md:text-2xl font-bold mb-4">Related guides</h2>
-        <ul className="space-y-2 list-disc pl-5">
-          <li><a href="/airport-transfers" className="text-primary hover:underline">Airport</a></li>
-          <li><a href="/driving-parking-guide" className="text-primary hover:underline">Driving Tips</a></li>
-          <li><a href="/faq" className="text-primary hover:underline">FAQ</a></li>
-        </ul>
-      </section>
-
       <div className="flex justify-center pb-12">
         <a href="/#compare" className="cta-button">Compare Car Rental Deals</a>
       </div>
