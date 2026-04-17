@@ -36,26 +36,42 @@ function slugToTitle(slug) {
     .join(' ');
 }
 
+function replaceOrInsert(html, regex, insertValue, headInsert) {
+  if (regex.test(html)) {
+    return html.replace(regex, insertValue);
+  }
+  // Not found → insert just before </head>
+  return html.replace(/<\/head>/, `${headInsert}\n  </head>`);
+}
+
 function patchHead(html, { slug, canonical, title }) {
-  // Replace canonical
-  html = html.replace(
+  // Canonical — replace or insert
+  html = replaceOrInsert(
+    html,
     /<link rel="canonical" href="[^"]*"\s*\/?>/,
     `<link rel="canonical" href="${canonical}" />`,
+    `    <link rel="canonical" href="${canonical}" />`,
   );
-  // Replace title
-  html = html.replace(
+  // Title — replace or insert
+  html = replaceOrInsert(
+    html,
     /<title>[^<]*<\/title>/,
     `<title>${title}</title>`,
+    `    <title>${title}</title>`,
   );
-  // Replace og:url
-  html = html.replace(
+  // og:url — replace or insert
+  html = replaceOrInsert(
+    html,
     /<meta property="og:url" content="[^"]*"\s*\/?>/,
     `<meta property="og:url" content="${canonical}" />`,
+    `    <meta property="og:url" content="${canonical}" />`,
   );
-  // Replace og:title
-  html = html.replace(
+  // og:title — replace or insert
+  html = replaceOrInsert(
+    html,
     /<meta property="og:title" content="[^"]*"\s*\/?>/,
     `<meta property="og:title" content="${title}" />`,
+    `    <meta property="og:title" content="${title}" />`,
   );
   // Inject BreadcrumbList JSON-LD before </head>
   const crumbs = {
