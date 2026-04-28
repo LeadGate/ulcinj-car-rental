@@ -72,7 +72,10 @@ const AboutContact = () => {
       />
 
       <Section
-        icon={<Car className="w-6 h-6" />}
+        icon={<Car className="w-6 h-6" />
+        <p className="text-gray-700 mb-4 leading-relaxed">
+          <strong>ulcinj-car-rental.com is an independent car rental booking guide</strong> for Ulcinj. <strong>ulcinj-car-rental.com does not own vehicles, operate a rental office, hold deposits, or issue rental contracts.</strong> All bookings, supplier conditions, deposits, insurance terms and final prices are handled by the booking partner or rental supplier shown in the booking widget.
+        </p>}
         title="Who We Are"
       >
           <p className="text-gray-700 mb-4 leading-relaxed">Ulcinj Car Rental is an independent affiliate platform that compares offers from <strong>Prego Rent a Car</strong>, <strong>MCommerce</strong>, <strong>Elezovic Rent</strong>, <strong>Rent a Car 999</strong>, <strong>MontenegroCar</strong>, <strong>Tim Rent</strong>, <strong>Kalamper Petrol</strong>, and <strong>MTL Rent a Car</strong> for pickup in Ulcinj, Podgorica Airport TGD, and Tivat Airport TIV.</p>
