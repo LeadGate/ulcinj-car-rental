@@ -72,12 +72,12 @@ const AboutContact = () => {
       />
 
       <Section
-        icon={<Car className="w-6 h-6" />
-        <p className="text-gray-700 mb-4 leading-relaxed">
-          <strong>ulcinj-car-rental.com is an independent car rental booking guide</strong> for Ulcinj. <strong>ulcinj-car-rental.com does not own vehicles, operate a rental office, hold deposits, or issue rental contracts.</strong> All bookings, supplier conditions, deposits, insurance terms and final prices are handled by the booking partner or rental supplier shown in the booking widget.
-        </p>}
+        icon={<Car className="w-6 h-6" />}
         title="Who We Are"
       >
+        <p className="text-gray-700 mb-4 leading-relaxed">
+          <strong>ulcinj-car-rental.com is an independent car rental booking guide</strong> for Ulcinj. <strong>ulcinj-car-rental.com does not own vehicles, operate a rental office, hold deposits, or issue rental contracts.</strong> All bookings, supplier conditions, deposits, insurance terms and final prices are handled by the booking partner or rental supplier shown in the booking widget.
+        </p>
           <p className="text-gray-700 mb-4 leading-relaxed">Ulcinj Car Rental is an independent affiliate platform that compares offers from <strong>Prego Rent a Car</strong>, <strong>MCommerce</strong>, <strong>Elezovic Rent</strong>, <strong>Rent a Car 999</strong>, <strong>MontenegroCar</strong>, <strong>Tim Rent</strong>, <strong>Kalamper Petrol</strong>, and <strong>MTL Rent a Car</strong> for pickup in Ulcinj, Podgorica Airport TGD, and Tivat Airport TIV.</p>
           <p className="text-gray-700 mb-4 leading-relaxed">Our guides cover practical trip planning for routes to Velika Plaža, Ada Bojana, Valdanos Cove, Stari Bar, Sveti Stefan, and Skadar Lake. A compact car like a <strong>Škoda Fabia</strong> works for city driving, while families may prefer a <strong>Peugeot 2008</strong> or <strong>Hyundai i20</strong> for longer coastal routes.</p>
           <p className="text-gray-700 mb-4 leading-relaxed">All route information is based on first-hand checks from both airports to the Ulcinj coastline. For parking and local driving rules, see our <a href="/driving-parking-guide" className="text-primary hover:underline">driving and parking guide</a>, which covers summer congestion, paid parking zones, and border timing.</p>
