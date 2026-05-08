@@ -57,7 +57,6 @@ const AboutContact = () => {
         title="About Us — Car Rental Guide for Ulcinj"
         description="Welcome to Ulcinj's car rental comparison guide for Montenegro. Ulcinj Car Rental helps travelers compare local and international suppliers, vehicle"
         canonical="https://ulcinj-car-rental.com/about"
-        jsonLd={[breadcrumbSchema, articleSchema]}
       />
 
       <Breadcrumbs items={[{ label: "About Contact" }]} />
