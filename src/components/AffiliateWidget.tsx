@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Search } from "lucide-react";
 
 const WIDGET_SRC =
-  "https://tpembd.com/content?trs=513393&shmarker=713621.ulcinj&powered_by=true&country=147&city=&lang=en&width=100&background=transparent&logo=false&header=false&gearbox=false&cars=false&border=false&footer=false&campaign_id=&promo_id=";
+  "https://tpembd.com/content?trs=513393&shmarker=713621.ulcinj&powered_by=true&country=133&city=18&lang=en&width=100&background=transparent&logo=false&header=false&gearbox=false&cars=false&border=false&footer=false&campaign_id=&promo_id=";
 
 const AffiliateWidget = () => {
   const containerRef = useRef<HTMLDivElement>(null);
