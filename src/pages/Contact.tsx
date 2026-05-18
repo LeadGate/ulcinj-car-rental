@@ -21,7 +21,7 @@ const Contact = () => {
       <SEOHead
         title="Contact Us — Ulcinj Car Rental"
         description="Get in touch with our team for car rental advice in Ulcinj, Montenegro. We help with bookings, insurance questions, Albania border crossing, and parking tips."
-        canonical="https://ulcinj-car-rental.com/contact"
+        canonical="https://ulcinj-car-rental.com/contact/"
       />
 
       <Breadcrumbs items={[{ label: "Contact" }]} />

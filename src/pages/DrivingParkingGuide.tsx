@@ -57,7 +57,7 @@ const DrivingGuide = () => {
       <SEOHead
         title="Ulcinj Driving Rules & Parking — Prices & Tips"
         description="Ulcinj is a strong base for a rental car because the city connects quickly to the Adriatic coast, the Montenegrin Riviera, and day-trip routes toward"
-        canonical="https://ulcinj-car-rental.com/driving-parking-guide"
+        canonical="https://ulcinj-car-rental.com/driving-parking-guide/"
       />
 
       <Breadcrumbs items={[{ label: "Driving Tips" }]} />
@@ -126,7 +126,7 @@ const DrivingGuide = () => {
           <p className="text-gray-700 mb-4 leading-relaxed">Most Montenegro rental contracts include third-party liability, often shortened to TPL, but the policy wording may still leave you responsible for an excess/franchise if you damage wheels, glass, or the undercarriage. Full coverage or zero excess options can reduce that exposure, but many companies still place a preauthorisation hold on your card at pick-up.</p>
           <WarningBox><p>⚠️ <strong>Warning:</strong> “Full coverage” does not always mean zero excess, so check the rental voucher for the exact deductible amount before you sign.</p></WarningBox>
           <p className="text-gray-700 mb-4 leading-relaxed">Roadside assistance is available from AMSCG at 19807, and that service is useful if you need towing, battery help, or a flat tire response on a coastal road. If you are traveling toward remote beaches near Valdanos Cove or roads by the Bojana River, keep the rental company’s emergency number saved offline because mobile signal can drop in isolated areas.</p>
-          <p className="text-gray-700 mb-4 leading-relaxed">For more route-specific planning, see our <a href="/beaches-day-trips" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj beaches and day trips guide</a> and our <a href="/airport-transfers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">airport transfer options</a>.</p>
+          <p className="text-gray-700 mb-4 leading-relaxed">For more route-specific planning, see our <a href="/beaches-day-trips/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj beaches and day trips guide</a> and our <a href="/airport-transfers/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">airport transfer options</a>.</p>
       </Section>
 
       <ImageDivider src="/3.webp" alt="Ulcinj car rental" />
@@ -177,9 +177,9 @@ const DrivingGuide = () => {
       <section className="container max-w-4xl py-10">
         <h2 className="text-xl md:text-2xl font-bold mb-4">Related guides</h2>
         <ul className="space-y-2 list-disc pl-5">
-          <li><a href="/airport-transfers" className="text-primary hover:underline">Airport</a></li>
-          <li><a href="/beaches-day-trips" className="text-primary hover:underline">Day Trips</a></li>
-          <li><a href="/faq" className="text-primary hover:underline">FAQ</a></li>
+          <li><a href="/airport-transfers/" className="text-primary hover:underline">Airport</a></li>
+          <li><a href="/beaches-day-trips/" className="text-primary hover:underline">Day Trips</a></li>
+          <li><a href="/faq/" className="text-primary hover:underline">FAQ</a></li>
         </ul>
       </section>
 

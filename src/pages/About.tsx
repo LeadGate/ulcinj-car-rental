@@ -56,7 +56,7 @@ const AboutContact = () => {
       <SEOHead
         title="About Us — Car Rental Guide for Ulcinj"
         description="Welcome to Ulcinj's car rental comparison guide for Montenegro. Ulcinj Car Rental helps travelers compare local and international suppliers, vehicle"
-        canonical="https://ulcinj-car-rental.com/about"
+        canonical="https://ulcinj-car-rental.com/about/"
       />
 
       <Breadcrumbs items={[{ label: "About Contact" }]} />
@@ -79,7 +79,7 @@ const AboutContact = () => {
         </p>
           <p className="text-gray-700 mb-4 leading-relaxed">Ulcinj Car Rental is an independent affiliate platform that compares offers from <strong>Prego Rent a Car</strong>, <strong>MCommerce</strong>, <strong>Elezovic Rent</strong>, <strong>Rent a Car 999</strong>, <strong>MontenegroCar</strong>, <strong>Tim Rent</strong>, <strong>Kalamper Petrol</strong>, and <strong>MTL Rent a Car</strong> for pickup in Ulcinj, Podgorica Airport TGD, and Tivat Airport TIV.</p>
           <p className="text-gray-700 mb-4 leading-relaxed">Our guides cover practical trip planning for routes to Velika Plaža, Ada Bojana, Valdanos Cove, Stari Bar, Sveti Stefan, and Skadar Lake. A compact car like a <strong>Škoda Fabia</strong> works for city driving, while families may prefer a <strong>Peugeot 2008</strong> or <strong>Hyundai i20</strong> for longer coastal routes.</p>
-          <p className="text-gray-700 mb-4 leading-relaxed">All route information is based on first-hand checks from both airports to the Ulcinj coastline. For parking and local driving rules, see our <a href="/driving-parking-guide" className="text-primary hover:underline">driving and parking guide</a>, which covers summer congestion, paid parking zones, and border timing.</p>
+          <p className="text-gray-700 mb-4 leading-relaxed">All route information is based on first-hand checks from both airports to the Ulcinj coastline. For parking and local driving rules, see our <a href="/driving-parking-guide/" className="text-primary hover:underline">driving and parking guide</a>, which covers summer congestion, paid parking zones, and border timing.</p>
           <p className="text-gray-700 mb-4 leading-relaxed"><strong>Affiliate Disclosure:</strong> We may earn a commission when a booking is completed through a partner link. Travellers pay no extra fee — this model funds our price checks and route research.</p>
       </Section>
 
@@ -144,9 +144,9 @@ const AboutContact = () => {
       <section className="container max-w-4xl py-10">
         <h2 className="text-xl md:text-2xl font-bold mb-4">Related guides</h2>
         <ul className="space-y-2 list-disc pl-5">
-          <li><a href="/airport-transfers" className="text-primary hover:underline">Airport</a></li>
-          <li><a href="/beaches-day-trips" className="text-primary hover:underline">Day Trips</a></li>
-          <li><a href="/driving-parking-guide" className="text-primary hover:underline">Driving Tips</a></li>
+          <li><a href="/airport-transfers/" className="text-primary hover:underline">Airport</a></li>
+          <li><a href="/beaches-day-trips/" className="text-primary hover:underline">Day Trips</a></li>
+          <li><a href="/driving-parking-guide/" className="text-primary hover:underline">Driving Tips</a></li>
         </ul>
       </section>
 

@@ -58,7 +58,7 @@ const DayTrips = () => {
       <SEOHead
         title="Ulcinj Beaches & Day Trips by Car — Routes & Parking"
         description="Ulcinj, on Montenegro’s southern Adriatic coast, works best as a self-drive base because beaches, border crossings, and hill towns sit 10–120 minutes"
-        canonical="https://ulcinj-car-rental.com/beaches-day-trips"
+        canonical="https://ulcinj-car-rental.com/beaches-day-trips/"
       />
 
       <Breadcrumbs items={[{ label: "Day Trips" }]} />
@@ -95,7 +95,7 @@ const DayTrips = () => {
           <p className="text-gray-700 mb-4 leading-relaxed"><strong>Valdanos parking:</strong> The lot is usually free, and the main cost is the time you stay rather than the access fee. Because the cove is exposed in windy weather, it works best on calm summer afternoons.</p>
           <h3 className="text-xl font-bold mt-6 mb-3">Mala Plaža and the Old Town Beaches</h3>
           <p className="text-gray-700 mb-4 leading-relaxed"><strong>Mala Plaža:</strong> Ulcinj’s town beach is walkable from the center, and drivers usually avoid bringing a car because parking is limited and paid near the Old Town.</p>
-          <p className="text-gray-700 mb-4 leading-relaxed">Mala Plaža and the smaller Old Town beaches are best used as foot-access beaches after you park once and leave the car. For city parking rules, read <a href="/driving-parking-guide" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj driving and parking advice</a>, because the narrow streets around Korzo promenade and the historic core can make turnaround difficult in peak season.</p>
+          <p className="text-gray-700 mb-4 leading-relaxed">Mala Plaža and the smaller Old Town beaches are best used as foot-access beaches after you park once and leave the car. For city parking rules, read <a href="/driving-parking-guide/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj driving and parking advice</a>, because the narrow streets around Korzo promenade and the historic core can make turnaround difficult in peak season.</p>
       </Section>
 
       <Section
@@ -187,9 +187,9 @@ const DayTrips = () => {
           <CompanyCard><p><strong>AMSCG:</strong> Montenegro’s motorists’ association is a credible source for road-condition checks, winter warnings, and current traffic advice before driving the Jadranska Magistrala or mountain routes toward Cetinje.</p></CompanyCard>
           <h3 className="text-xl font-bold mt-6 mb-3">Related guides</h3>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-            <li><a href="/driving-parking-guide" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj driving and parking advice</a></li>
-            <li><a href="/airport-transfers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Airport transfer options</a></li>
-            <li><a href="/faq" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Frequently asked questions</a></li>
+            <li><a href="/driving-parking-guide/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ulcinj driving and parking advice</a></li>
+            <li><a href="/airport-transfers/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Airport transfer options</a></li>
+            <li><a href="/faq/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Frequently asked questions</a></li>
           </ul>
       </Section>
 
