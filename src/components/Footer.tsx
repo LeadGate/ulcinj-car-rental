@@ -18,9 +18,6 @@ const outboundLinks = [
 
 const Footer = () => (
   <footer className="bg-foreground text-primary-foreground" role="contentinfo">
-      <p className="text-xs opacity-60 leading-relaxed mb-4 px-4 max-w-4xl mx-auto">
-        ulcinj-car-rental.com is an independent car rental guide. We may earn a commission when you book through partner links or the booking widget. Final prices, availability, deposits, insurance terms and supplier conditions are provided by the booking partner or rental supplier.
-      </p>
     <div className="container py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -67,7 +64,7 @@ const Footer = () => (
       <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-sm opacity-60">
         <p className="mb-2">Affiliate disclosure: This site contains links to car rental partners. We may earn a commission at no extra cost to you.</p>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p>Last updated: April 2026</p>
+          <p>Last updated: May 2026</p>
           <p>&copy; {new Date().getFullYear()} ulcinj-car-rental.com</p>
         </div>
       </div>
