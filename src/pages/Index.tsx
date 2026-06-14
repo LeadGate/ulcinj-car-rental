@@ -57,7 +57,7 @@ const Index = () => {
       <SEOHead
         title="Ulcinj Car Rental — Compare Deals | Ulcinj Car Rental"
         description="Ulcinj car rental is the fastest way to reach Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area on a schedule that matches"
-        canonical="https://ulcinj-car-rental.com"
+        canonical="https://ulcinj-car-rental.com/"
         jsonLd={[breadcrumbSchema, websiteSchema, organizationSchema]}
       />
 
