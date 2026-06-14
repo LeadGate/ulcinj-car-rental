@@ -76,6 +76,14 @@ function lookupCfg(slug) {
 }
 
 function patchHead(html, { slug, canonical, title, description, cfg }) {
+  // Strip homepage-inherited BreadcrumbList/FAQPage JSON-LD so subpages don't
+  // carry the homepage's nav breadcrumb + generic FAQ (this prerender copies the
+  // homepage index.html as its base for every route). We re-inject a correct
+  // per-route BreadcrumbList below, and per-route FAQPage from routes.json.
+  // Organization + WebSite blocks are preserved. Homepage (/) is never patched.
+  html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (m) =>
+    /"@type":\s*"(BreadcrumbList|FAQPage)"/.test(m) ? '' : m,
+  );
   // Canonical — replace or insert
   html = replaceOrInsert(
     html,
