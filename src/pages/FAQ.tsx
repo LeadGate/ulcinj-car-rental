@@ -139,7 +139,7 @@ const FAQ = () => {
         image="/6.webp"
         imageAlt="Car rental in Ulcinj"
         ctaText="Compare Car Rental Deals"
-        ctaHref="#compare"
+        ctaHref="#compare-cars"
       />
 
       <AffiliateWidget />
