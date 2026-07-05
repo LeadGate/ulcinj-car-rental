@@ -52,18 +52,46 @@ const Index = () => {
     }
   };
 
+  const faqSchema =
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I rent a car in Ulcinj without a credit card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — some Ulcinj agencies allow cash or debit-card rentals (Elezovic Rent is described as cash-only), while larger operators such as MontenegroCar or airport desks often prefer a card for the deposit preauthorisation. Many agencies still require a valid card for the security block even when the final payment is cash." },
+      },
+      {
+        "@type": "Question",
+        "name": "Is cross-border travel from Ulcinj to Albania allowed?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, if the agency authorizes it: many rentals can issue a Green Card for the Sukobin/Muriqan border, and Ulcinj to Shkodër is a practical international day trip. Some local fleets restrict travel to Montenegro only — verify the border rule before pickup." },
+      },
+      {
+        "@type": "Question",
+        "name": "Is full coverage worth it for car rental in Ulcinj?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Often yes for predictable costs: local quotes commonly price CDW at €10–20/day and full coverage/SCDW at €25–50/day, which can be cheaper than paying a large excess after a claim. For short trips with an acceptable deductible, a basic policy may be more cost-effective." },
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cheapest time to book a rental in Ulcinj?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Off-season: December deals can fall to about €13/day and October–May often stays at €20–35/day for economy cars. Peak July is the opposite — a live check on 5 July 2026 showed same-week cars from €40/day, median €48/day — so summer trips should be booked well ahead." },
+      },
+    ],
+  };
+
   return (
     <Layout>
       <SEOHead
         title="Ulcinj Car Rental — Compare Deals | Ulcinj Car Rental"
         description="Ulcinj car rental is the fastest way to reach Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area on a schedule that matches"
         canonical="https://ulcinj-car-rental.com/"
-        jsonLd={[breadcrumbSchema, websiteSchema, organizationSchema]}
+        jsonLd={[breadcrumbSchema, websiteSchema, organizationSchema, faqSchema]}
       />
 
       <HeroSection
         title="Drive Ulcinj Like a Local: Compare Car Rentals from €20/day"
-        subtitle={<><p>Ulcinj car rental is the fastest way to reach <strong>Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area</strong> on a schedule that matches your trip, not a bus timetable. Local agencies such as <strong>Prego Rent a Car, MCommerce, Elezovic Rent, Rent a Car 999, MontenegroCar, Tim Rent, Kalamper Petrol, and MTL Rent a Car</strong> offer economy cars from <strong>€20/day</strong>, while airport pickups at <strong>Podgorica Airport TGD</strong> and <strong>Tivat Airport TIV</strong> can add convenience if you are crossing the <strong>Sozina Tunnel</strong> or driving the <strong>Adriatic Highway / Jadranska Magistrala</strong> toward the <strong>Adriatic coast</strong> and the <strong>Montenegrin Riviera</strong>.</p></>}
+        subtitle={<><p>Same-week reality, 5 July 2026: 12 cars were bookable in Ulcinj from €40/day (Hyundai i20, Toyota Yaris), median €48/day — the from-€20 economy rates apply to advance and off-season bookings. Ulcinj car rental is the fastest way to reach <strong>Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area</strong> on a schedule that matches your trip, not a bus timetable. Local agencies such as <strong>Prego Rent a Car, MCommerce, Elezovic Rent, Rent a Car 999, MontenegroCar, Tim Rent, Kalamper Petrol, and MTL Rent a Car</strong> serve the town, while airport pickups at <strong>Podgorica Airport TGD</strong> and <strong>Tivat Airport TIV</strong> can add convenience if you are crossing the <strong>Sozina Tunnel</strong> or driving the <strong>Adriatic Highway / Jadranska Magistrala</strong> toward the <strong>Adriatic coast</strong> and the <strong>Montenegrin Riviera</strong>.</p></>}
         image="/1.webp"
         imageAlt="Car rental in Ulcinj"
         ctaText="Compare Car Rental Deals"
