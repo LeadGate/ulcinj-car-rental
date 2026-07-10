@@ -205,6 +205,14 @@ function patchHead(html, { slug, canonical, title, description, cfg }) {
       };
       blocks.push(`    <script type="application/ld+json">\n${JSON.stringify(faqPage, null, 2)}\n    </script>`);
     }
+    if (Array.isArray(cfg.extraSchemas)) {
+      for (const s of cfg.extraSchemas) {
+        const obj = s['@context'] ? s : { '@context': 'https://schema.org', ...s };
+        blocks.push(`    <script type="application/ld+json">
+${JSON.stringify(obj, null, 2)}
+    </script>`);
+      }
+    }
     if (blocks.length) {
       html = html.replace(/<\/head>/, `${blocks.join('\n')}\n  </head>`);
     }

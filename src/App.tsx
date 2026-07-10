@@ -5,6 +5,7 @@ import Index from "./pages/Index";
 const AirportTransfers = lazy(() => import("./pages/AirportTransfers"));
 const BeachesDayTrips = lazy(() => import("./pages/BeachesDayTrips"));
 const DrivingParkingGuide = lazy(() => import("./pages/DrivingParkingGuide"));
+const CrossBorderMontenegro = lazy(() => import("./pages/CrossBorderMontenegro"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/airport-transfers" element={<AirportTransfers />} />
             <Route path="/beaches-day-trips" element={<BeachesDayTrips />} />
             <Route path="/driving-parking-guide" element={<DrivingParkingGuide />} />
+            <Route path="/cross-border-car-rental-montenegro" element={<CrossBorderMontenegro />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
