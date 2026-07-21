@@ -72,6 +72,8 @@ const AirportPage = () => {
         ctaHref="#compare-cars"
       />
 
+      <AffiliateWidget />
+
       <Section
         icon={<Plane className="w-6 h-6" />}
         title="Podgorica Airport TGD or Tivat Airport TIV for Ulcinj?"
