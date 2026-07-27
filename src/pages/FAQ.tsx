@@ -27,52 +27,17 @@ const FAQ_ITEMS = [
   { question: "What Happens If My Car Breaks Down?", answer: "If your rental car breaks down, call the agency’s 24/7 emergency number first and then follow their roadside instructions exactly. In Montenegro, many agencies work with AMSCG, the national Auto-moto Association, and the standard roadside number is 19807. Some local providers, including Elezovic Rent and other Ulcinj operators, may offer a replacement car at the same class or a similar daily rate if the fault is mechanical and not caused by misuse. Keep your rental agreement, photos, and location pin ready, especially if the issue happens outside town near R-17, the Adriatic Highway, or the route toward Stari Bar." },
 ];
 
-const stripTags = (html: string) =>
-  html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-
 const FAQ = () => {
-  const breadcrumbSchema =
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ulcinj-car-rental.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "FAQ",
-        "item": "https://ulcinj-car-rental.com/faq"
-      }
-    ]
-  };
-
-  // Built from FAQ_ITEMS so the schema can never drift from the visible accordion.
-  const faqSchema =
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": stripTags(item.answer),
-      },
-    })),
-  };
-
+  // BreadcrumbList + FAQPage for this route are emitted by scripts/prerender.mjs
+  // from prerender.routes.json, which mirrors FAQ_ITEMS. This template carries no
+  // boss-prerender marker, so passing jsonLd to SEOHead would append a SECOND
+  // copy of both blocks after hydration.
   return (
     <Layout>
       <SEOHead
         title="Ulcinj Car Rental FAQ: Cross-Border, Parking & Insurance"
         description="Ulcinj car rental Q&A: €20-€60 Albania cross-border fee, €0.90/hr Zone I summer parking, no IDP needed for Latin alphabet licences, and CDW for €10-€20/day."
         canonical="https://ulcinj-car-rental.com/faq/"
-        jsonLd={[breadcrumbSchema, faqSchema]}
       />
 
       <Breadcrumbs items={[{ label: "FAQ" }]} />
