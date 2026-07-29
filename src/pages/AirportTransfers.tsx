@@ -56,7 +56,7 @@ const AirportPage = () => {
   return (
     <Layout>
       <SEOHead
-        title="Airport Car Rental for Ulcinj — TGD & TIV Pickup"
+        title="Ulcinj Airport Car Rental: TGD & TIV Transfer Guide"
         description="Planning an Ulcinj airport car rental starts with one decision that affects time, tolls, and summer traffic: Podgorica Airport TGD is usually the faster"
         canonical="https://ulcinj-car-rental.com/airport-transfers/"
       />

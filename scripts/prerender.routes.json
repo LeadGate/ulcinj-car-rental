@@ -196,5 +196,11 @@
         }
       }
     ]
+  },
+  "/about/": {
+    "title": "About Us — Car Rental Guide for Ulcinj"
+  },
+  "/contact/": {
+    "title": "Contact Us — Ulcinj Car Rental"
   }
 }

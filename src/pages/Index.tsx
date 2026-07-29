@@ -83,7 +83,7 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Ulcinj Car Rental — Compare Deals | Ulcinj Car Rental"
+        title="Ulcinj Car Rental — Compare Local Deals from €20/day"
         description="Ulcinj car rental is the fastest way to reach Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area on a schedule that matches"
         canonical="https://ulcinj-car-rental.com/"
         jsonLd={[breadcrumbSchema, websiteSchema, organizationSchema, faqSchema]}
