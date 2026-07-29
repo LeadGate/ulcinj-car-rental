@@ -84,7 +84,7 @@ const Index = () => {
     <Layout>
       <SEOHead
         title="Ulcinj Car Rental — Compare Local Deals from €20/day"
-        description="Ulcinj car rental is the fastest way to reach Velika Plaža, Ada Bojana, Valdanos Cove, Šasko Lake, and the Old Town Ulcinj area on a schedule that matches"
+        description="Compare car rental prices in Ulcinj, Montenegro from €20/day. Local agencies Prego, MCommerce, Elezovic + airport pickup at Podgorica TGD and Tivat TIV."
         canonical="https://ulcinj-car-rental.com/"
         jsonLd={[breadcrumbSchema, websiteSchema, organizationSchema, faqSchema]}
       />

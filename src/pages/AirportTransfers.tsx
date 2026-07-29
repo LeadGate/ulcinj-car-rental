@@ -57,7 +57,7 @@ const AirportPage = () => {
     <Layout>
       <SEOHead
         title="Ulcinj Airport Car Rental: TGD & TIV Transfer Guide"
-        description="Planning an Ulcinj airport car rental starts with one decision that affects time, tolls, and summer traffic: Podgorica Airport TGD is usually the faster"
+        description="Compare car rental from Podgorica Airport TGD (79 km, ~1 hr 20 min, €2.50 Sozina Tunnel toll) and Tivat TIV (85 km) for Ulcinj arrivals with local agencies."
         canonical="https://ulcinj-car-rental.com/airport-transfers/"
       />
 

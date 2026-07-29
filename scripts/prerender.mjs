@@ -241,7 +241,10 @@ for (const loc of locs) {
   // otherwise hydration flips the title and crawler/Google see different strings.
   const title = (cfg && (cfg.title || (cfg.article && cfg.article.headline))) || `${slugToTitle(slug)} | ${brand}`;
   // Description: only patch if cfg.article.description provided (else preserve existing static/homepage value)
-  const description = cfg && cfg.article && cfg.article.description ? cfg.article.description : null;
+  // Description priority mirrors the title above: explicit cfg.description (pages with no
+  // Article schema) > cfg.article.description. Must stay identical to <SEOHead description=…>,
+  // otherwise hydration overwrites meta[name=description] and crawler/Google see two strings.
+  const description = (cfg && (cfg.description || (cfg.article && cfg.article.description))) || null;
   const patched = patchHead(indexHtml, { slug, canonical: loc, title, description, cfg });
   fs.writeFileSync(path.join(outDir, 'index.html'), patched);
   count += 1;

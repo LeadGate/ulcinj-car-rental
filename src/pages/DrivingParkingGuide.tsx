@@ -56,7 +56,7 @@ const DrivingGuide = () => {
     <Layout>
       <SEOHead
         title="Driving & Parking in Ulcinj: Rules, Fines, and Prices"
-        description="Ulcinj is a strong base for a rental car because the city connects quickly to the Adriatic coast, the Montenegrin Riviera, and day-trip routes toward"
+        description="Ulcinj driving guide: 50 km/h urban speed limits, 0.03% BAC, €0.90/hr Zone I summer parking, and Sozina Tunnel tolls. Avoid fines with rental cars from TGD."
         canonical="https://ulcinj-car-rental.com/driving-parking-guide/"
       />
 

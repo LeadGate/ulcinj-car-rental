@@ -57,7 +57,7 @@ const DayTrips = () => {
     <Layout>
       <SEOHead
         title="Ulcinj Beaches & Day Trips by Car: Parking & Routes"
-        description="Ulcinj, on Montenegro’s southern Adriatic coast, works best as a self-drive base because beaches, border crossings, and hill towns sit 10–120 minutes"
+        description="Drive Ulcinj's Adriatic coast: Velika Plaža (5-15 km, sunbeds €10-€40) and Ada Bojana (15 km, 20-25 min). Learn CDW terms and summer parking before 11:00."
         canonical="https://ulcinj-car-rental.com/beaches-day-trips/"
       />
 

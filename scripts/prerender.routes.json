@@ -198,9 +198,11 @@
     ]
   },
   "/about/": {
-    "title": "About Us — Car Rental Guide for Ulcinj"
+    "title": "About Us — Car Rental Guide for Ulcinj",
+    "description": "Ulcinj Car Rental is a comparison guide for Montenegro: compare local and international suppliers, vehicle classes, and pickup points at TGD and Tivat."
   },
   "/contact/": {
-    "title": "Contact Us — Ulcinj Car Rental"
+    "title": "Contact Us — Ulcinj Car Rental",
+    "description": "Get in touch with our team for car rental advice in Ulcinj, Montenegro. We help with bookings, insurance questions, Albania border crossing, and parking tips."
   }
 }

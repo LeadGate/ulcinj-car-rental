@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     <Layout>
       <SEOHead
         title="Privacy Policy for Ulcinj Car Rental"
-        description="Privacy policy for Ulcinj Car Rental. Learn how we handle your data and protect your privacy."
+        description="Privacy policy for Ulcinj Car Rental explaining how user data is handled, the use of cookies, privacy-focused analytics, and third-party links."
         canonical="https://ulcinj-car-rental.com/privacy-policy/"
       />
 
