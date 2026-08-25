@@ -15,6 +15,32 @@ const WIDGET_SRC =
 const FALLBACK_URL = "https://www.localrent.com/en/montenegro/ulcinj/?marker=713621.ulcinj";
 const FALLBACK_LABEL = "Or browse all Ulcinj rentals on Localrent →";
 
+
+// GA4 funnel probe (2026-08-25) — port of the Astro fleet's AffiliateWidget.jsx
+// probe (2026-08-22) to the React fleet. The widget is a THIRD-PARTY iframe from
+// tpembd.com, so a click inside it is unreachable by design: same-origin policy,
+// not a gap we can close. These events measure everything around it.
+// Sent via window.gtag when it exists, falling back to a raw dataLayer push —
+// a build that renames the global still records the event. No-ops entirely when
+// GA4 is absent, so an untagged site is unaffected.
+function track(name: string, params?: Record<string, unknown>) {
+  try {
+    if (typeof window === "undefined") return;
+    const w = window as Window & {
+      gtag?: (...args: unknown[]) => void;
+      dataLayer?: unknown[];
+    };
+    const payload = { ...(params || {}), page_path: window.location.pathname };
+    if (typeof w.gtag === "function") {
+      w.gtag("event", name, payload);
+      return;
+    }
+    if (Array.isArray(w.dataLayer)) w.dataLayer.push(["event", name, payload]);
+  } catch {
+    /* analytics must never break the page */
+  }
+}
+
 const AffiliateWidget = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scriptFailed, setScriptFailed] = useState(false);
@@ -27,16 +53,31 @@ const AffiliateWidget = () => {
 
     const load = () => {
       if (!containerRef.current) return;
+      // `trigger` marks how this page view reached the load. The Astro fleet gates
+      // the same probe behind an IntersectionObserver, so its widget_view means
+      // "reached the viewport"; here it means "load started". Keeping the React
+      // behaviour untouched and labelling the event is honest; silently reusing
+      // the name across two different meanings is not.
+      track("widget_view", { trigger: "idle-no-observer" });
       const script = document.createElement("script");
       script.async = true;
       script.src = WIDGET_SRC;
       script.charset = "utf-8";
-      script.onerror = () => setScriptFailed(true);
+      script.onerror = () => {
+        setScriptFailed(true);
+        track("widget_failed", { reason: "script_onerror" });
+      };
       containerRef.current.appendChild(script);
       window.setTimeout(() => {
         if (!containerRef.current) return;
-        if (containerRef.current.querySelectorAll("*").length < 6) {
+        // Node count, not the Astro selector list: this widget renders via
+        // <div>+<a> only, so iframe/form/input/button never match here.
+        const nodes = containerRef.current.querySelectorAll("*").length;
+        if (nodes < 6) {
           setScriptFailed(true);
+          track("widget_failed", { nodes });
+        } else {
+          track("widget_loaded", { nodes });
         }
       }, 8000);
     };
@@ -49,6 +90,31 @@ const AffiliateWidget = () => {
     } else {
       window.setTimeout(load, 1500);
     }
+  }, []);
+
+  // widget_exit — fires at most once per page view. Mirrors the Astro probe.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    let over = false;
+    let sent = false;
+    const enter = () => { over = true; };
+    const leave = () => { over = false; };
+    const onBlur = () => {
+      if (!over || sent) return;
+      sent = true;
+      track("widget_exit");
+    };
+    el.addEventListener("mouseenter", enter);
+    el.addEventListener("mouseleave", leave);
+    el.addEventListener("touchstart", enter, { passive: true });
+    window.addEventListener("blur", onBlur);
+    return () => {
+      el.removeEventListener("mouseenter", enter);
+      el.removeEventListener("mouseleave", leave);
+      el.removeEventListener("touchstart", enter);
+      window.removeEventListener("blur", onBlur);
+    };
   }, []);
 
   return (
@@ -76,6 +142,7 @@ const AffiliateWidget = () => {
               href={FALLBACK_URL}
               target="_blank"
               rel="noopener nofollow sponsored"
+              onClick={() => track("widget_fallback_click")}
               className="text-primary underline underline-offset-2 hover:no-underline"
             >
               {FALLBACK_LABEL}

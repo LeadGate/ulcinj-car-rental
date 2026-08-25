@@ -125,6 +125,17 @@
   }
 }
   </script>
+    <!-- GA4 (2026-08-25) — воронка виджета: widget_view/loaded/failed/exit.
+         Тег стоит в корневом index.html: scripts/prerender.mjs берёт собранный
+         dist/index.html как основу КАЖДОГО маршрута, поэтому head расходится на
+         все страницы сам. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZPH66LTQ8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HZPH66LTQ8');
+    </script>
   </head>
 
   <body>
