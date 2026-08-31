@@ -68,8 +68,33 @@ const AffiliateWidget = () => {
         track("widget_failed", { reason: "script_onerror" });
       };
       containerRef.current.appendChild(script);
+      // widget_abandoned (2026-08-31) closes the silent bucket. The detector
+      // below speaks only at t+8s and only while the container is still
+      // mounted, so a visitor who left earlier produced NO event at all:
+      // `widget_view -> widget_loaded` was really measuring "stayed 8 seconds",
+      // not "the widget rendered". Measured on the 25-30.08 window: 120 of 220
+      // Astro views (54.5%) and 47 of 126 React views (37.3%) ended in silence.
+      // `pagehide`, not `visibilitychange`, on purpose: clicking into the
+      // tpembd iframe does not unload the page, so this can never collide with
+      // widget_exit. GA4 ships the hit via sendBeacon, which survives unload.
+      // Every widget_view now resolves into exactly one of loaded / failed /
+      // abandoned.
+      let settled = false;
+      const startedAt = Date.now();
+      const onLeave = () => {
+        if (settled) return;
+        settled = true;
+        track("widget_abandoned", { ms: Date.now() - startedAt, reason: "pagehide" });
+      };
+      window.addEventListener("pagehide", onLeave);
       window.setTimeout(() => {
-        if (!containerRef.current) return;
+        window.removeEventListener("pagehide", onLeave);
+        if (settled) return;
+        settled = true;
+        if (!containerRef.current) {
+          track("widget_abandoned", { ms: Date.now() - startedAt, reason: "unmounted" });
+          return;
+        }
         // Node count, not the Astro selector list: this widget renders via
         // <div>+<a> only, so iframe/form/input/button never match here.
         const nodes = containerRef.current.querySelectorAll("*").length;

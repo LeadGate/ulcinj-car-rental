@@ -111,8 +111,19 @@
   }
 }
   </script>
-    <script type="module" crossorigin src="/assets/index-vsTdZUEG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BZD9Wj3k.css">
+    <!-- GA4 (2026-08-25) — воронка виджета: widget_view/loaded/failed/exit.
+         Тег стоит в корневом index.html: scripts/prerender.mjs берёт собранный
+         dist/index.html как основу КАЖДОГО маршрута, поэтому head расходится на
+         все страницы сам. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZPH66LTQ8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HZPH66LTQ8');
+    </script>
+    <script type="module" crossorigin src="/assets/index-BZYd4ynV.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-KRNiRfFZ.css">
       <link rel="canonical" href="https://ulcinj-car-rental.com/privacy-policy/" />
       <script type="application/ld+json">
 {
@@ -161,7 +172,7 @@
     "@type": "WebPage",
     "@id": "https://ulcinj-car-rental.com/privacy-policy/"
   },
-  "wordCount": 800,
+  "wordCount": 166,
   "articleBody": "Privacy Policy Information We Collect Cookies Analytics Third-Party Links Contact { return ( Privacy Policy Your privacy matters to us. This page outlines how Ulcinj Car Rental collects, uses, and protects your information. Information We Collect We do not collect personal data directly. When you use our comparison widget to search for or book a rental car, your data is processed by our affiliate partners according to their own privacy policies. This website may use cookies for analytics and to improve your browsing experience. Third-party services embedded on this site (such as booking widgets) may also set cookies. You can manage cookie preferences in your browser settings. We may use privacy-focused analytics tools to understand how visitors use our website. This data is aggregated and does not identify individual users. Third-Party Links Our website contains links to external sites. We are not responsible for the privacy practices or content of these third-party sites. If you have questions about this privacy policy, please contact us at info@ulcinj-car-rental.com"
 }
     </script>
