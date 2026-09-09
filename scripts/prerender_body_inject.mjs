@@ -2,9 +2,15 @@
 // prerender_body_inject.mjs — BOSS Pipeline Phase 1A/1B snapshot freeze (v2)
 //
 // Runs AFTER `prerender.mjs` (head-patcher). Reads pre-rendered HTML from
-// `dist/__snapshots__/<slug>.html` and injects each into the matching
+// `snapshots/<slug>.html` and injects each into the matching
 // `dist/<slug>/index.html` between <div id="root"> and </div>.
 // The special slug `index` targets the homepage `dist/index.html`.
+//
+// 2026-08-20: source moved from `public/__snapshots__/` to `snapshots/`.
+// Anything under `public/` is copied verbatim into the build, so the snapshots
+// shipped to the live site: `/__snapshots__/` answered 200 with a bare page body
+// - no <head>, no meta description, no canonical - a thin duplicate of the route
+// it was cut from. They are a BUILD INPUT, not a public asset.
 //
 // Why: Vite SPA build emits empty <div id="root"></div>. Crawlers without JS
 // execution (GPTBot, ClaudeBot, PerplexityBot, CCBot, GoogleOther) see no
@@ -29,11 +35,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIST = 'dist';
-const SNAPSHOT_DIR = path.join(DIST, '__snapshots__');
+const SNAPSHOT_DIR = 'snapshots';
 const EMPTY_ROOT = '<div id="root"></div>';
 
 if (!fs.existsSync(SNAPSHOT_DIR)) {
-  console.log('[prerender-body] no dist/__snapshots__/ directory, skipping');
+  console.log('[prerender-body] no snapshots/ directory, skipping');
   process.exit(0);
 }
 
@@ -42,7 +48,7 @@ const snapshots = fs
   .filter((f) => f.endsWith('.html') && !f.endsWith('.generated.html'));
 
 if (snapshots.length === 0) {
-  console.log('[prerender-body] dist/__snapshots__/ is empty, skipping');
+  console.log('[prerender-body] snapshots/ is empty, skipping');
   process.exit(0);
 }
 
