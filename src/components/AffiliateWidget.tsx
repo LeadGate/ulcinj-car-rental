@@ -143,7 +143,7 @@ const AffiliateWidget = () => {
   }, []);
 
   return (
-    <section className="py-8" id="compare-cars">
+    <section className="py-8 scroll-mt-20" id="compare-cars">
       <div className="container max-w-3xl mx-auto">
         <div className="bg-background rounded-lg p-6 text-center border border-border shadow-sm">
           <div className="flex items-center justify-center gap-3 mb-3">

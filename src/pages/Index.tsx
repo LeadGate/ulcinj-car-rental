@@ -96,6 +96,7 @@ const Index = () => {
         imageAlt="Car rental in Ulcinj"
         ctaText="Compare Car Rental Deals"
         ctaHref="#compare-cars"
+        anchorCtaHref="#compare-cars"
       />
 
       <AffiliateWidget />

@@ -8,6 +8,8 @@ interface HeroSectionProps {
   imageAlt?: string;
   ctaText?: string;
   ctaHref?: string;
+  /** Якорь виджета для кнопки в первом экране. Задавать ТОЛЬКО на главной. */
+  anchorCtaHref?: string;
   children?: ReactNode;
 }
 
@@ -19,12 +21,13 @@ interface HeroSectionProps {
  * at the bottom of the page (after content), so the hero stays clean and
  * readable on top of the background photo.
  */
-const HeroSection = ({ title, subtitle, image, imageAlt, children }: HeroSectionProps) => {
+const HeroSection = ({ title, subtitle, image, imageAlt, anchorCtaHref, children }: HeroSectionProps) => {
   return (
     <HeroDiagonal
       title={title}
       backgroundImage={image || "/1.webp"}
       backgroundAlt={imageAlt || title}
+      anchorCtaHref={anchorCtaHref}
     >
       {subtitle || children}
     </HeroDiagonal>
